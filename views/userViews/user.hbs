@@ -1,0 +1,27 @@
+<div class="container">
+  <br>
+    <h3>Users list</h2>
+   
+        <table class="table">
+  <thead>
+    <br>
+    <tr>
+      <th>Imię i nazwisko</th>
+      <th>Pełne dane adresowe</th>
+      <th>Aktywny link do strony WWW</th>
+    </tr>
+  </thead>
+
+{{#each users}}     
+  <tbody>
+    <tr>
+        <td>{{name}}</td>
+    <td>{{address.street}}<br>
+    {{address.suite}}<br>{{address.city}}<br>{{address.zipcode}}<br>Geo location: {{address.geo.lat}}, {{address.geo.lng}}
+    </td>
+    <td><a href="http://{{website}}" class="nav-link active">{{website}}</a></td></tr>
+  </tbody>
+    {{/each}}
+</table>
+
+</div>
